@@ -9,7 +9,7 @@ Our proposed framework, Stable-Makeup, is a novel diffusion-based method for mak
 Given a source image $\mathit{I_s}$ , a reference makeup image $\mathit{I_m}$ and an obtained facial structure control image $\mathit{I_c}$ , Stable-Makeup utilizes D-P makeup encoder to encode $\mathit{I_m}$. Content and structural encoders are used to encode $\mathit{I_s}$ and $\mathit{I_c}$ respectively. With the aid of the makeup cross-attention layers, Stable-Makeup aligns the facial regions of $\mathit{I_s}$ and $\mathit{I_m}$ , enabling successful transfers the intricate makeup details. After content-structure decoupling training, Stable-Makeup further maintains content and structure of $\mathit{I_s}$ .
 
 ## Todo List
-1. - [ ] inference and training code
+1. - [x] inference and training code
 2. - [ ] pre-trained weights
 
 ## Citation
