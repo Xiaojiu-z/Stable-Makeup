@@ -12,6 +12,34 @@ Given a source image $\mathit{I_s}$ , a reference makeup image $\mathit{I_m}$ an
 1. - [x] inference and training code
 2. - [ ] pre-trained weights
 
+## Getting Started
+### Environment Setup
+Our code is built on the [diffusers](https://github.com/huggingface/diffusers/) version of Stable Diffusion v1-5. We use [SPIGA](https://github.com/andresprados/SPIGA) and [facelib](https://github.com/sajjjadayobi/FaceLib) to draw face structural images. 
+```shell
+git clone https://github.com/Xiaojiu-z/Stable-Makeup.git
+cd Stable-Makeup
+```
+### Pretrained Models
+Coming Soon！
+
+### Inference
+```python
+python infer_kps.py
+```
+
+### Training
+You can prepare datasets follow our paper and make a jsonl file (each line with 4 key-value pairs, including original id, edited id, augmented id, face structural image of edited id) or you can implement a dataset and a dataloader class by yourself (Probably faster than organizing into my data form).
+
+```python
+bash train.sh
+```
+
+### Gradio demo
+We provide a simple gr demo for more flexible use.
+```python
+python gradio_demo_kps.py
+```
+
 ## Citation
 ```
 @misc{zhang2024stablemakeup,
