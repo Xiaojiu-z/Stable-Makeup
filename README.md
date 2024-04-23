@@ -10,7 +10,7 @@ Given a source image $\mathit{I_s}$ , a reference makeup image $\mathit{I_m}$ an
 
 ## Todo List
 1. - [x] inference and training code
-2. - [ ] pre-trained weights
+2. - [x] pre-trained weights
 
 ## Getting Started
 ### Environment Setup
@@ -20,15 +20,17 @@ git clone https://github.com/Xiaojiu-z/Stable-Makeup.git
 cd Stable-Makeup
 ```
 ### Pretrained Models
-Coming Soon！
+[Google Drive](https://drive.google.com/drive/folders/1397t27GrUyLPnj17qVpKWGwg93EcaFfg?usp=sharing).
+Download them and save them to the directory `models/stablemakeup`. One deviation from the original paper is randomly dropping out inputs into the structural encoder during training, resulting in improved semantic alignment. Enjoy it!
 
 ### Inference
+
 ```python
 python infer_kps.py
 ```
 
 ### Training
-You can prepare datasets follow our paper and make a jsonl file (each line with 4 key-value pairs, including original id, edited id, augmented id, face structural image of edited id) or you can implement a dataset and a dataloader class by yourself (Probably faster than organizing into my data form).
+You can prepare datasets following our paper and make a jsonl file (each line with 4 key-value pairs, including original id, edited id, augmented id, face structural image of edited id) or you can implement a dataset and a dataloader class by yourself (Probably faster than organizing into my data form).
 
 ```python
 bash train.sh
@@ -42,12 +44,10 @@ python gradio_demo_kps.py
 
 ## Citation
 ```
-@misc{zhang2024stablemakeup,
-      title={Stable-Makeup: When Real-World Makeup Transfer Meets Diffusion Model}, 
-      author={Yuxuan Zhang and Lifu Wei and Qing Zhang and Yiren Song and Jiaming Liu and Huaxia Li and Xu Tang and Yao Hu and Haibo Zhao},
-      year={2024},
-      eprint={2403.07764},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{zhang2024stable,
+  title={Stable-Makeup: When Real-World Makeup Transfer Meets Diffusion Model},
+  author={Zhang, Yuxuan and Wei, Lifu and Zhang, Qing and Song, Yiren and Liu, Jiaming and Li, Huaxia and Tang, Xu and Hu, Yao and Zhao, Haibo},
+  journal={arXiv preprint arXiv:2403.07764},
+  year={2024}
 }
 ```
